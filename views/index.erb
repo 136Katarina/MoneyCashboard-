@@ -1,0 +1,31 @@
+
+<table id="index_table">
+<thead>
+<tr>
+  <th>ID</th>
+  <th>Date</th>
+  <th>Store</th>
+  <th>Tag</th>
+  <th>Amount</th>
+</tr>
+</thead>
+<tbody>
+<% @transactions.each do |transaction| %>
+<tr>
+  <td><h4><a href="/transactions/<%= transaction.id %>"><%= transaction.id %></a></h4></td>
+  <td><%= transaction.transaction_date %></td>
+  <td><%= transaction.store.name %></td>
+  <td><%= transaction.tag.tag_category %></td>
+  <td><%= transaction.amount %></td>
+</tr>
+<% end %>
+</tbody>
+</table>
+
+<p>Total Spent = £<%= @total %><p>
+<p>Budget = £<%= Transaction.budget %></p>
+
+
+<form method="get" action="/transactions/new">
+  <button type="submit"> Add new </button>
+</form>

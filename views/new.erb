@@ -1,0 +1,43 @@
+<h3>Make a new transaction</h2>
+<form method="post" action="/transactions">
+  <div class="wrapper">
+
+
+
+
+    <div class="form-one">
+      <label for="date">Date:</label>
+      <input type = "date" name="transaction_date" id="date"/>
+    </div>
+
+    <div class="form-one">
+    <label for="store-select">Select Store: </label>
+    <select id="store-select" name="store_id">
+      <% @stores.each do |store| %>
+        <option value=<%= store.id %>><%= store.name %></option>
+      <% end %>
+    </select>
+  </div>
+
+  <div class="form-one">
+  <label for="tag-select">Select Tag: </label>
+  <select id="tag-select" name="tag_id">
+    <% @tags.each do |tag| %>
+      <option value=<%= tag.id %>><%= tag.tag_category %></option>
+    <% end %>
+  </select>
+</div>
+
+
+    <div class="form-one">
+      <label for="amount">Amount:</label>
+      <input type = "number" name="amount" id="amount"/>
+    </div>
+</div>
+
+
+
+  <button class="submit">Add New</button>
+
+  </div>
+</form>
