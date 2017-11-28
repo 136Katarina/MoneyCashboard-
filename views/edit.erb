@@ -1,5 +1,7 @@
+<div class="container">
 <h3>Update your Transaction</h2>
-<form method="post" action="/transactions">
+<form method="post" action="/transactions/<%= @transaction.id %>">
+  <input type="hidden" name="_method" value="put">
   <div class="wrapper">
 
 
@@ -28,7 +30,6 @@
   </select>
 </div>
 
-
     <div class="form-one">
       <label for="amount">Amount:</label>
       <input type = "number" name="amount" id="amount"/>
@@ -37,7 +38,8 @@
 
 
 
-  <button class="submit">Update</button>
+  <button class="button big-button">Update</button>
 
   </div>
 </form>
+</div>

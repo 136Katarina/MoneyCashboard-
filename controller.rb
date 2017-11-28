@@ -44,10 +44,10 @@ get '/transactions/:id/edit' do
 end
 
 
-post '/transactions/:id' do
+put '/transactions/:id' do
   transaction = Transaction.new(params)
   transaction.update
-  redirect to "/transactions/#{params['id']}"
+  redirect to '/transactions'
 end
 
 
@@ -56,4 +56,10 @@ delete '/transactions/:id' do
   transaction = Transaction.find( params[:id])
   transaction.delete
   redirect to '/transactions'
+end
+
+
+get '/category' do
+  @tag = Tag.all
+  erb(:category)
 end

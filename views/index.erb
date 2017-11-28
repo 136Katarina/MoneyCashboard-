@@ -1,5 +1,15 @@
+<div class="container">
 
-<table id="index_table">
+<div class="floating-box">
+<p><span class="total">Total Spent </span><br>£<%= @total %><p>
+</div>
+<div class="floating-box">
+<p><span class="total">Budget </span><br>£<%= Transaction.budget %></p>
+</div>
+
+
+
+<table>
 <thead>
 <tr>
   <th>ID</th>
@@ -22,10 +32,8 @@
 </tbody>
 </table>
 
-<p>Total Spent = £<%= @total %><p>
-<p>Budget = £<%= Transaction.budget %></p>
-
 
 <form method="get" action="/transactions/new">
-  <button type="submit"> Add new </button>
+  <button class="add" type="submit"> Add New </button>
 </form>
+</div>

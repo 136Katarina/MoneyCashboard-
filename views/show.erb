@@ -1,8 +1,10 @@
-<p> Transaction: <%= @transaction.id %></p>
-<p> Date: <%= @transaction.transaction_date %></p>
-<p> Store <%= @transaction.store.name %></p>
-<p> Category <%= @transaction.tag.tag_category %></p>
-<p>Amount <%= @transaction.amount %></p>
+
+<div class="container">
+<p><span class="new"> Transaction: </span><%= @transaction.id %></p>
+<p><span class="new"> Date:</span> <%= @transaction.transaction_date %></p>
+<p><span class="new"> Store: </span><%= @transaction.store.name %></p>
+<p><span class="new"> Category:</span> <%= @transaction.tag.tag_category %></p>
+<p><span class="new">Amount: </span><%= @transaction.amount %></p>
 
 <p><a href="/transactions/<%= @transaction.id %>/edit">Edit</a></p>
 
@@ -15,3 +17,4 @@
   <input type="hidden" name="_method" value="delete">
   <button type="submit">Delete</button>
 </form>
+</div>

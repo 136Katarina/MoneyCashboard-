@@ -1,0 +1,27 @@
+<div class="container">
+<h1>hey</h1>
+
+<table>
+<thead>
+<tr>
+  <th>ID</th>
+  <th>Date</th>
+  <th>Store</th>
+  <th>Tag</th>
+  <th>Amount</th>
+</tr>
+</thead>
+<tbody>
+<% @transactions.each do |transaction| %>
+<tr>
+  <td><h4><a href="/transactions/<%= transaction.id ==  %>"><%= transaction.id %></a></h4></td>
+  <td><%= transaction.transaction_date %></td>
+  <td><%= transaction.store.name %></td>
+  <td><%= transaction.tag.tag_category %></td>
+  <td><%= transaction.amount %></td>
+</tr>
+<% end %>
+</tbody>
+</table>
+
+</div>

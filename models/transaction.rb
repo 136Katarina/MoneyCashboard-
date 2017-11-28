@@ -37,17 +37,11 @@ end
 
 def update()
   sql = "UPDATE transactions
-  SET
-  (
-    transaction_date,
-    store_id,
-    tag_id,
-    amount
-    )
-    VALUES(
-      $1,$2,$3,$4
-      )
-      WHERE id =$5"
+  SET transaction_date = $1,
+      store_id = $2,
+      tag_id = $3,
+      amount = $4
+    WHERE id =$5"
     values= [@transaction_date,@store_id, @tag_id,@amount,@id]
     SqlRunner.run(sql,values)
   end
@@ -123,11 +117,21 @@ def self.total()
   update()
 end
 
-def self.total_by_tag_type(id)
+def self.tag_type(id)
+    sql = "SELECT *
+    FROM transactions
+    WHERE tag_id = $1"
+    values = [id]
+    results = SqlRunner.run(sql, values)
+    return results.map { |transaction| Transaction.new(transaction) }
+end
+
+
+def self.total_by_tag_category(tag_id)
   sql= "SELECT SUM(amount)
   FROM transactions
   WHERE tag_id= $1"
-  values = [id]
+  values = [tag_id]
   result = SqlRunner.run(sql,values)
   return result.first['sum'].to_i
 end

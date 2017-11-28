@@ -1,3 +1,67 @@
 body {
-  background-color: pink;
+  background-color: gray;
+
+}
+
+a:link{
+  text-decoration: none;
+
+}
+
+
+.container {
+  margin-left: 40%;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+.new {
+  font-weight: bold;
+}
+
+.floating-box {
+  margin: 40px 20px 20px 20px;
+  display: inline-block;
+  height: 100px;
+  background-color: #e6e6e6;
+  width: 150px;
+  border: 2px solid darkgray;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 20px;
+  text-align: center;
+}
+
+.add {
+  width: 100px;
+  height: 30px;
+  margin: 10px;
+  background-color: lightgray;
+  font-weight: 300;
+  border-radius: 5px;
+}
+
+.total {
+  font-size: 20px;
+  font-weight: 600;
+
+}
+
+table {
+  margin-top: 50px;
+  border-collapse:collapse;
+  width: 60%;
+
+}
+
+th {
+  text-transform: uppercase;
+}
+
+th,td {
+  padding: 3px;
+  text-align: left;
+  border-bottom: 1px solid gray;
 }
