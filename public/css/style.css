@@ -65,3 +65,7 @@ th,td {
   text-align: left;
   border-bottom: 1px solid gray;
 }
+
+.category_box {
+  border: 1px solid black;
+}
