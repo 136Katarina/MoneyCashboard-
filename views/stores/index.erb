@@ -1,3 +1,25 @@
 <div class="container">
-<p>test</p>
-</div>
+
+
+  <table id="store_table">
+  <th>
+    NAME
+  </th>
+  <tbody>
+  <% @stores.each do |store| %>
+  <tr>
+    <td<%= store.id %></td>
+    <td><%= store.name %></td>
+  </tr>
+  <% end %>
+  </tbody>
+  </table>
+
+
+
+
+
+  <form method="get" action="/stores/new">
+    <button class="add" type="submit"> Add New </button>
+  </form>
+  </div>

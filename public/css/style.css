@@ -14,13 +14,19 @@ a:link{
 
 }
 
+#store_table {
+
+}
+
+
+
 .budget_box {
   margin: 20px;
 }
 
 
 .container {
-  margin-left: 40%;
+  margin-left: 30%;
 }
 
 h3 {
@@ -44,6 +50,11 @@ h3 {
   text-align: center;
   font-size: 20px;
   text-align: center;
+}
+
+
+#tag .floating-box {
+  background-color: pink;
 }
 
 .add {
@@ -78,6 +89,25 @@ th,td {
   border-bottom: 1px solid gray;
 }
 
+.new_input {
+  font-size: 15px;
+}
+
+.wrapper {
+  border: 1px solid black;
+  width: 300px;
+  height: auto;
+  padding: 50px;
+  border-radius: 5px;
+  margin: 20px;
+  font-size: 18px;
+  color: black;
+
+}
+.addnew{
+  background-color: gray;
+  margin: 0 auto;
+}
 
 
 /*.flex-container {

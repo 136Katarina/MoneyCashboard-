@@ -8,12 +8,12 @@
 
 
     <div class="form-one">
-      <label for="date">Date:</label>
+      <label class="new_input" for="date">Date:</label>
       <input type = "date" name="transaction_date" id="date"/>
     </div>
 
     <div class="form-one">
-    <label for="store-select">Select Store: </label>
+    <label class="new_input" for="store-select">Select Store: </label>
     <select id="store-select" name="store_id">
       <% @stores.each do |store| %>
         <option value=<%= store.id %>><%= store.name %></option>
@@ -22,7 +22,7 @@
   </div>
 
   <div class="form-one">
-  <label for="tag-select">Select Tag: </label>
+  <label class="new_input" for="tag-select">Select Tag: </label>
   <select id="tag-select" name="tag_id">
     <% @tags.each do |tag| %>
       <option value=<%= tag.id %>><%= tag.tag_category %></option>
@@ -32,8 +32,8 @@
 
 
     <div class="form-one">
-      <label for="amount">Amount:</label>
-      <input type = "number" name="amount" id="amount"/>
+      <label class="new_input" for="amount">Amount:</label>
+      <input placeholder="Enter amount"type = "number" name="amount" id="amount"/>
     </div>
 </div>
 

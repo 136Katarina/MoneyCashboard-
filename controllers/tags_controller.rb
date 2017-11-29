@@ -13,6 +13,7 @@ get '/tags' do
 end
 
 get '/tags/:id' do
+  @tags = Tag.all
   @tag = Tag.find(params[:id])
   @transactions = Transaction.tag_type(params[:id])
   @sum = Transaction.total_by_tag_category(params[:id])
