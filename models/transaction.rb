@@ -1,3 +1,4 @@
+require('pry-byebug')
 require_relative ('../db/sql_runner')
 require_relative('./tag')
 require_relative('./store')
@@ -80,7 +81,7 @@ def update()
 
   def find_tag_category()
     sql = "SELECT * FROM tags
-    WHERE ID = $1"
+    WHERE id = $1"
     values = [@tag_category]
     tag = SqlRunner.run(sql,values)
     tag_name = Tag.new(tag.first)
@@ -133,7 +134,7 @@ def self.total_by_tag_category(tag_id)
   WHERE tag_id= $1"
   values = [tag_id]
   result = SqlRunner.run(sql,values)
-  return result.first['sum'].to_i
+  return result[0]['sum'].to_i
 end
 
 def self.budget

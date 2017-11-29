@@ -6,12 +6,8 @@
 <p><span class="new"> Category:</span> <%= @transaction.tag.tag_category %></p>
 <p><span class="new">Amount: </span><%= @transaction.amount %></p>
 
-<p><a href="/transactions/<%= @transaction.id %>/edit">Edit</a></p>
-
-
-
-
-
+<button><a href="/transactions/<%= @transaction.id %>/edit">Edit</a></button>
+</br></br>
 
 <form method="post" action="/transactions/<%= @transaction.id %>">
   <input type="hidden" name="_method" value="delete">
