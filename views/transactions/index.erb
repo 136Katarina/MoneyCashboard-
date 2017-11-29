@@ -1,10 +1,23 @@
 <div class="container">
+  <div class="budget_box">
+  <h4 id="setting">Your Budget is <%= @@BUDGET %>
+  </div>
 
 <div class="floating-box">
 <p><span class="total">Total Spent </span><br>£<%= @total %><p>
 </div>
 <div class="floating-box">
-<p><span class="total">Budget </span><br>£<%= Transaction.budget %></p>
+  <% if  (@@BUDGET - @total) < 0 %>
+    <% class_name = "red" %>
+  <% else %>
+    <% class_name = "total" %>
+  <% end %>
+  <p class="<%= class_name %>">
+  <span style="font-size:20px;font-weight:600; color:black;">
+  Budget
+ </span>
+  <br>£<%= @@BUDGET - @total %>
+</p>
 </div>
 
 

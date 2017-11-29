@@ -1,12 +1,16 @@
 <div class="container">
-  <h2 style="margin-bottom:50px;">Choose a Category</h2>
+  <h2 style="margin-bottom:50px; ">Choose a Category</h2>
 
   <% @tags.each do |tag| %>
 
+  <div class="floating-box">
     <a href="/tags/<%= tag.id %>">
-      <p style="background:gray; width:130px; height:60px; text-align: center;
-      border:1px solid black; border-radius:10px" ><%= tag.tag_category %></p>
+      <p ><%= tag.tag_category %></p>
     </a>
+
+  </div>
+
+
 
 
   <% end %>

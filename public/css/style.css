@@ -1,11 +1,21 @@
+
+
+
 body {
   background-color: gray;
+}
 
+.red {
+  color: red;
 }
 
 a:link{
   text-decoration: none;
 
+}
+
+.budget_box {
+  margin: 20px;
 }
 
 
@@ -14,7 +24,9 @@ a:link{
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 40px;
+   text-shadow: 1px 1px;
+   color: darkgray;
 }
 
 .new {
@@ -66,6 +78,9 @@ th,td {
   border-bottom: 1px solid gray;
 }
 
-.category_box {
-  border: 1px solid black;
-}
+
+
+/*.flex-container {
+  display: flex;
+  justify-content: center;
+}*/
