@@ -9,7 +9,7 @@
 
 
 <% if @transactions.length == 0  %>
- <p class="transaction_date"> There was no transaction performed on <%=@date%></p> 
+ <p class="transaction_date"> There was no transaction performed on <%=@date%></p>
 <% else %>
 <table class="w3-hoverable" id="list_date">
 <thead>
@@ -29,7 +29,7 @@
   <td><%= transaction.transaction_date %></td>
   <td><%= transaction.store.name %></td>
   <td><%= transaction.tag.tag_category %></td>
-  <td><%= transaction.amount %></td>
+  <td><%= sprintf('%.2f',(transaction.amount/100.to_f)) %></td>
   <td><%= transaction.note %></td>
 </tr>
 <% end %>

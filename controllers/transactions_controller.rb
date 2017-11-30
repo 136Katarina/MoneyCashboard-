@@ -9,11 +9,11 @@ require_relative('../models/store.rb')
 @@BUDGET = 1000
 
 
-
 get '/transactions' do
   @transactions = Transaction.all
   @total = Transaction.total()
-    erb(:'transactions/index')
+  @total = @total/100.to_f
+  erb(:'transactions/index')
 end
 
  get '/transactions/search' do
@@ -29,6 +29,7 @@ get '/transactions/new' do
 end
 
 post '/transactions' do
+  params[:amount] = params[:amount].to_f * 100
   @transaction = Transaction.new(params)
   @transaction.save()
   redirect to "/transactions"
@@ -52,6 +53,7 @@ end
 
 
 put '/transactions/:id' do
+    params[:amount] = params[:amount].to_f * 100
   transaction = Transaction.new(params)
   transaction.update
   redirect to '/transactions'

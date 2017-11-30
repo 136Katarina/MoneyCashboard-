@@ -51,7 +51,7 @@ transaction1 = Transaction.new ({
   "transaction_date" => "2017-11-22",
   "store_id" => store1.id,
   "tag_id" => tag3.id,
-  "amount" => 150,
+  "amount" => 15055,
   "note" => "medicine"
   })
 
@@ -59,7 +59,7 @@ transaction2 = Transaction.new ({
   "transaction_date" => "2017-10-11",
   "store_id" => store2.id,
   "tag_id" => tag2.id,
-  "amount" => 300,
+  "amount" => 30095,
   "note" => "colouring book"
 
   })
@@ -69,7 +69,7 @@ transaction3 = Transaction.new ({
   "transaction_date" => "2017-01-20",
   "store_id" => store3.id,
   "tag_id" => tag3.id,
-  "amount" => 20,
+  "amount" => 2020,
   "note" => "soap"
   })
 

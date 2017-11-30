@@ -23,7 +23,7 @@
   <td><%= transaction.transaction_date %></td>
   <td><%= transaction.store.name %></td>
   <td><%= transaction.tag.tag_category %></td>
-  <td><%= transaction.amount %></td>
+  <td><%= sprintf('%.2f',(transaction.amount/100.to_f)) %></td>
   <td><%= transaction.note %></td>
 </tr>
 <% end %>
@@ -32,6 +32,6 @@
 
 
 
-<p><span class="total">Total Spent </span><br>£<%= @sum %><p>
+<p><span class="total">Total Spent </span><br>£<%= sprintf('%.2f',@sum) %><p>
   <% end %>
 </div>

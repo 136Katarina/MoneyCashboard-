@@ -40,11 +40,13 @@ end
 
 def update()
   sql = "UPDATE transactions
-  SET transaction_date = $1,
+  SET
+  transaction_date = $1,
       store_id = $2,
       tag_id = $3,
-      amount = $4
+      amount = $4,
       note = $5
+
     WHERE id =$6"
     values= [@transaction_date,@store_id, @tag_id,@amount,@note,@id]
     SqlRunner.run(sql,values)

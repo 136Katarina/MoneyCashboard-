@@ -5,7 +5,7 @@
 <p><span class="new"> Date:</span> <%= @transaction.transaction_date %></p>
 <p><span class="new"> Store: </span><%= @transaction.store.name %></p>
 <p><span class="new"> Category:</span> <%= @transaction.tag.tag_category %></p>
-<p><span class="new">Amount: </span><%= @transaction.amount %></p>
+<p><span class="new">Amount: </span><%= sprintf('%2f',(@transaction.amount/100.to_f)) %></p>
 <p><span class="new">Note: </span><%= @transaction.note %></p>
 
 <button class="w3-button w3-black w3-hover-teal"><a href="/transactions/<%= @transaction.id %>/edit">Edit</a></button>

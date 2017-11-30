@@ -17,5 +17,6 @@ get '/tags/:id' do
   @tag = Tag.find(params[:id])
   @transactions = Transaction.tag_type(params[:id])
   @sum = Transaction.total_by_tag_category(params[:id])
+  @sum = @sum/100.to_f
   erb(:'tags/show')
 end
