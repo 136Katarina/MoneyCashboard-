@@ -21,5 +21,6 @@ CREATE TABLE transactions (
   transaction_date DATE,
   store_id INT4 REFERENCES stores(id),
   tag_id INT4 REFERENCES tags(id),
-  amount INT4
+  amount INT4,
+  note VARCHAR(255)
   );

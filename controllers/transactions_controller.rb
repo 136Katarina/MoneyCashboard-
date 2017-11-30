@@ -18,6 +18,7 @@ end
 
  get '/transactions/search' do
    @transactions = Transaction.find_by_date(params[:transaction_date])
+   @date = params[:transaction_date]
    erb(:'transactions/search')
 end
 

@@ -5,7 +5,7 @@
   <% if @sum == 0 %>
   <p class="empty_list"> Sorry...There are currently no transactions in this category.</p>
   <% else %>
-<table>
+<table class="category_box">
 <thead>
 <tr>
   <th>ID</th>
@@ -13,6 +13,7 @@
   <th>Store</th>
   <th>Tag</th>
   <th>Amount</th>
+  <th>Note</th>
 </tr>
 </thead>
 <tbody>
@@ -23,6 +24,7 @@
   <td><%= transaction.store.name %></td>
   <td><%= transaction.tag.tag_category %></td>
   <td><%= transaction.amount %></td>
+  <td><%= transaction.note %></td>
 </tr>
 <% end %>
 </tbody>

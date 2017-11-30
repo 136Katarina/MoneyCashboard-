@@ -22,3 +22,19 @@ post '/stores' do
   @store.save()
   redirect to '/stores'
 end
+
+get '/stores/:id' do
+  @store = Store.find(params[:id])
+  erb(:'stores/show')
+end
+
+get '/stores/:id/edit' do
+  @store = Store.find(params[:id])
+  erb(:'stores/edit')
+end
+
+delete '/stores/:id' do
+  store = Store.find(params[:id])
+  store.delete
+  redirect to '/stores/index'
+end

@@ -10,5 +10,5 @@ require_relative('controllers/transactions_controller.rb')
 @@BUDGET = 1000
 
 get '/' do
-  erb(:home)
+  redirect to "/transactions"
 end

@@ -18,7 +18,7 @@
 </div>
 
 
-  <h3 class="w3-center"> List of all your transactions</h3>
+  <h3 id="list" class="w3-center"> List of all your transactions</h3>
 
   <div class="w3-center" style="margin-left:80px;">
   <table class="w3-hoverable">
@@ -29,6 +29,7 @@
     <th>Store</th>
     <th>Tag</th>
     <th>Amount</th>
+    <th>Note</th>
   </tr>
   </thead>
   <tbody>
@@ -39,6 +40,7 @@
     <td><%= transaction.store.name %></td>
     <td><%= transaction.tag.tag_category %></td>
     <td><%= transaction.amount %></td>
+    <td><%= transaction.note %></td>
   </tr>
   <% end %>
   </tbody>

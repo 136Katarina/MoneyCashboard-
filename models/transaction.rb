@@ -7,7 +7,7 @@ require_relative('./budget')
 
 class Transaction
 
-attr_accessor :id,:transaction_date,:store_id, :tag_id, :amount
+attr_accessor :id,:transaction_date,:store_id, :tag_id, :amount, :note
 
 def initialize(options)
   @id = options['id'].to_i
@@ -15,6 +15,7 @@ def initialize(options)
   @store_id = options['store_id'].to_i
   @tag_id = options['tag_id'].to_i
   @amount = options['amount'].to_i
+  @note = options['note']
 end
 
 
@@ -25,12 +26,13 @@ def save()
     transaction_date,
     store_id,
     tag_id,
-    amount
+    amount,
+    note
     )
     VALUES(
-      $1,$2,$3,$4
+      $1,$2,$3,$4,$5
       ) RETURNING *"
-    values = [@transaction_date,@store_id, @tag_id, @amount]
+    values = [@transaction_date,@store_id, @tag_id, @amount, @note]
     transaction = SqlRunner.run(sql,values)
     @id = transaction.first()['id'].to_i
 end
@@ -42,8 +44,9 @@ def update()
       store_id = $2,
       tag_id = $3,
       amount = $4
-    WHERE id =$5"
-    values= [@transaction_date,@store_id, @tag_id,@amount,@id]
+      note = $5
+    WHERE id =$6"
+    values= [@transaction_date,@store_id, @tag_id,@amount,@note,@id]
     SqlRunner.run(sql,values)
   end
 

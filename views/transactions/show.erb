@@ -1,17 +1,18 @@
 
 <div class="container">
-  
+
 <p><span class="new"> Transaction: </span><%= @transaction.id %></p>
 <p><span class="new"> Date:</span> <%= @transaction.transaction_date %></p>
 <p><span class="new"> Store: </span><%= @transaction.store.name %></p>
 <p><span class="new"> Category:</span> <%= @transaction.tag.tag_category %></p>
 <p><span class="new">Amount: </span><%= @transaction.amount %></p>
+<p><span class="new">Note: </span><%= @transaction.note %></p>
 
-<button><a href="/transactions/<%= @transaction.id %>/edit">Edit</a></button>
+<button class="w3-button w3-black w3-hover-teal"><a href="/transactions/<%= @transaction.id %>/edit">Edit</a></button>
 </br></br>
 
 <form method="post" action="/transactions/<%= @transaction.id %>">
   <input type="hidden" name="_method" value="delete">
-  <button type="submit">Delete</button>
+  <button type="submit"  class="w3-button w3-black w3-hover-teal">Delete</button>
 </form>
 </div>
