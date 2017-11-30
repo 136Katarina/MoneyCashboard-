@@ -16,6 +16,11 @@ get '/transactions' do
     erb(:'transactions/index')
 end
 
+ get '/transactions/search' do
+   @transactions = Transaction.find_by_date(params[:transaction_date])
+   erb(:'transactions/search')
+end
+
 get '/transactions/new' do
   @tags = Tag.all
   @stores = Store.all

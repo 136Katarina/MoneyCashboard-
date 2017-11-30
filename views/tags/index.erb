@@ -1,9 +1,9 @@
 <div class="container">
-  <h2 style="margin-bottom:50px; ">Choose a Category</h2>
+  <h2 id="tag+category">Choose a Category</h2>
 
   <% @tags.each do |tag| %>
 
-  <div  class="floating-box"><img class="w3-hover-sepia" src="<%= tag.image_location %>" style="height:80px;">
+  <div  class="floating-box"><img src="<%= tag.image_location %>" style="height:80px;">
     <a href="/tags/<%= tag.id %>">
       <p ><%= tag.tag_category %></p>
     </a>

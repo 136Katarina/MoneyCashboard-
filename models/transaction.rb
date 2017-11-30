@@ -138,10 +138,14 @@ def self.total_by_tag_category(tag_id)
 end
 
 
-def self.order_asc
-  sql = "SELECT transaction_date FROM
-transactions
-ORDER BY transaction_date ASC"
+def self.find_by_date(transaction_date)
+  sql = "SELECT *
+FROM transactions
+WHERE transaction_date =$1"
+values=[transaction_date]
+result = SqlRunner.run(sql,values)
+transactions= result.map { |transaction| Transaction.new(transaction)}
+return transactions
 end
 
 # def self.budget

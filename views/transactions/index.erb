@@ -9,7 +9,7 @@
     <% class_name = "total" %>
   <% end %>
   <p class="<%= class_name %>">
-  <span style="font-size:20px;font-weight:600; color:black;">
+  <span style="font-size:20px; color:black">
   Budget
  </span>
   <br>£<%= @@BUDGET - @total %>
@@ -47,6 +47,13 @@
 
 <div class="w3-center" style="margin-top:20px;">
   <form method="get" action="/transactions/new">
-    <button class="w3-button w3-black" type="submit"> Add New </button>
+    <button class="w3-button w3-black w3-hover-teal" type="submit"> Add New </button>
   </form>
+<br>
+  <form method="get" action="/transactions/search">
+    <input type="date" name="transaction_date">
+    <br><br>
+      <button class="w3-button w3-black w3-hover-teal" type="submit"> Search </button>
+  </form>
+
   </div>

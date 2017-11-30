@@ -1,11 +1,14 @@
 
-<div class="container" style="margin-left:40%; margin-top: 10%">
+<div class="container">
 
 
-  <% if @sum == 0 %>
-  <p class="empty_list"> Sorry...There are currently no transactions in this category.</p>
-  <% else %>
-<table>
+
+
+<div class
+<h3 class="w3-center"> List by date</h3>
+
+<div class="w3-center" style="margin-left:80px;">
+<table class="w3-hoverable">
 <thead>
 <tr>
   <th>ID</th>
@@ -27,9 +30,7 @@
 <% end %>
 </tbody>
 </table>
+</div>
 
 
-
-<p><span class="total">Total Spent </span><br>£<%= @sum %><p>
-  <% end %>
 </div>
