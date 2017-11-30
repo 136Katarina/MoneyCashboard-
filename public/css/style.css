@@ -6,7 +6,7 @@ body {
 }
 
 .red {
-  color: red;
+  color: orange;
 }
 
 a:link{
@@ -14,8 +14,12 @@ a:link{
 
 }
 
-#store_table {
-
+.empty_list {
+  display: flex;
+  width: 400px;
+  height: 100px;
+  color: red;
+  border: 2px solid black;
 }
 
 
@@ -29,10 +33,15 @@ a:link{
   margin-left: 30%;
 }
 
+#home_container {
+  background-image: url(gallery/control.jpg);
+  background-size:cover;
+}
+
+
 h3 {
-  font-size: 40px;
-   text-shadow: 1px 1px;
-   color: darkgray;
+  font-size: 45px;
+  color: black;
 }
 
 .new {
@@ -46,7 +55,7 @@ h3 {
   background-color: #e6e6e6;
   width: 150px;
   border: 2px solid darkgray;
-  border-radius: 25px;
+  border-radius: 5px;
   text-align: center;
   font-size: 20px;
   text-align: center;
@@ -73,10 +82,10 @@ h3 {
 }
 
 table {
-  margin-top: 50px;
-  border-collapse:collapse;
-  width: 60%;
 
+  border-collapse:collapse;
+  width: 40%;
+  margin: 40px auto;
 }
 
 th {
@@ -95,11 +104,11 @@ th,td {
 
 .wrapper {
   border: 1px solid black;
-  width: 300px;
+  width: 400px;
   height: auto;
   padding: 50px;
   border-radius: 5px;
-  margin: 20px;
+  margin: 40px;
   font-size: 18px;
   color: black;
 
@@ -108,9 +117,3 @@ th,td {
   background-color: gray;
   margin: 0 auto;
 }
-
-
-/*.flex-container {
-  display: flex;
-  justify-content: center;
-}*/

@@ -11,7 +11,8 @@ CREATE TABLE stores (
 
 CREATE TABLE tags (
   id SERIAL4 PRIMARY KEY,
-  tag_category VARCHAR(255)
+  tag_category VARCHAR(255),
+  image_location VARCHAR(255)
   );
 
 

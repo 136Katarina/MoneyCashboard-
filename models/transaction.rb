@@ -137,6 +137,13 @@ def self.total_by_tag_category(tag_id)
   return result[0]['sum'].to_i
 end
 
+
+def self.order_asc
+  sql = "SELECT transaction_date FROM
+transactions
+ORDER BY transaction_date ASC"
+end
+
 # def self.budget
 #   result = @@BUDGET - Transaction.total()
 #   return result

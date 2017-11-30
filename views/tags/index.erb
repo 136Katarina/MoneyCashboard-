@@ -3,7 +3,7 @@
 
   <% @tags.each do |tag| %>
 
-  <div id="tag" class="floating-box">
+  <div  class="floating-box"><img class="w3-hover-sepia" src="<%= tag.image_location %>" style="height:80px;">
     <a href="/tags/<%= tag.id %>">
       <p ><%= tag.tag_category %></p>
     </a>
