@@ -143,6 +143,7 @@ def self.total_by_tag_category(tag_id)
 end
 
 
+
 def self.find_by_date(transaction_date)
   sql = "SELECT *
 FROM transactions

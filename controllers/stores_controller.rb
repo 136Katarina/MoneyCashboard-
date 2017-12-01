@@ -30,7 +30,14 @@ end
 
 get '/stores/:id/edit' do
   @store = Store.find(params[:id])
+  @stores = Store.all
   erb(:'stores/edit')
+end
+
+put '/stores/:id' do
+  store = Store.new(params)
+  store.update
+  redirect to '/transactions'
 end
 
 delete '/stores/:id' do
