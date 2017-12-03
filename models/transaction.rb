@@ -142,6 +142,14 @@ def self.total_by_tag_category(tag_id)
   return result[0]['sum'].to_i
 end
 
+def self.total_by_date(transaction_date)
+  sql = "SELECT SUM(transaction_date)
+  FROM transactions
+  WHERE transaction_date=$1"
+  values = [transaction_date]
+  result = SqlRunner.run(sql,values)
+  return result[0]['sum'].to_i
+end
 
 
 def self.find_by_date(transaction_date)
